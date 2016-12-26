@@ -3,7 +3,7 @@ require 'helper'
 class TestAvatar < Test::Unit::TestCase
   include DeterministicHelper
 
-  ROBOHASH = 'https://robohash.org'.freeze
+  FLATHASH = 'https://flathash.org'.freeze
 
   assert_methods_are_deterministic(FFaker::Avatar, :image)
 
@@ -12,7 +12,7 @@ class TestAvatar < Test::Unit::TestCase
   end
 
   def test_avatar
-    assert_match(/\Ahttps:\/\/robohash\.org\/.+\.png\?size=300x300\z/,
+    assert_match(/\Ahttps:\/\/flathash\.org\/.+\.png\?size=300x300\z/,
                  @tester.image)
   end
 
@@ -32,7 +32,7 @@ class TestAvatar < Test::Unit::TestCase
   end
 
   def test_avatar_with_supported_format
-    assert_equal("#{ROBOHASH}/faker.jpg?size=300x300",
+    assert_equal("#{FLATHASH}/faker.jpg?size=300x300",
                  @tester.image('faker', '300x300', 'jpg'))
   end
 
@@ -43,7 +43,7 @@ class TestAvatar < Test::Unit::TestCase
   end
 
   def test_avatar_with_correct_background
-    assert_equal("#{ROBOHASH}/faker.png?size=300x300&bgset=bg1",
+    assert_equal("#{FLATHASH}/faker.png?size=300x300&bgset=bg1",
                  @tester.image('faker', '300x300', 'png', '1'))
   end
 
