@@ -4,9 +4,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = '1.3.5'
 
   s.name              = 'ffaker'
-  s.version           = '2.3.0'
+  s.version           = '2.3.1'
   s.date              = '2016-11-13'
-  s.rubyforge_project = 'ffaker'
   s.required_ruby_version = '>= 1.9'
 
   s.license = 'MIT'
@@ -16,10 +15,11 @@ Gem::Specification.new do |s|
 
   s.authors = [
     'https://github.com/ffaker/ffaker/graphs/contributors',
-    'Emmanuel Oga'
+    'Emmanuel Oga',
+    'ZhuluX Inc'
   ]
-  s.email    = 'EmmanuelOga@gmail.com'
-  s.homepage = 'http://github.com/ffaker/ffaker'
+  s.email    = 'account@zhulux.com'
+  s.homepage = 'http://github.com/zhulux/ffaker'
 
   s.require_paths = %w(lib)
 
